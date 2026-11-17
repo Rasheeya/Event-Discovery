@@ -1,3 +1,8 @@
+const withBaseUrl = (filePath) => {
+  const base = import.meta.env.BASE_URL;
+  return filePath.startsWith('/') ? `${base}${filePath.slice(1)}` : `${base}${filePath}`;
+};
+
 export const INITIAL_EVENTS = [
   {
     id: "event-1",
@@ -9,8 +14,8 @@ export const INITIAL_EVENTS = [
     location: "San Francisco, CA",
     venue: "Moscone West Center, Level 3 Keynote Stage",
     format: "In-Person & Streamed",
-    image: "/images/events/event-1.webp",
-    banner: "/images/events/event-1.webp",
+    image: withBaseUrl("/images/events/event-1.webp"),
+    banner: withBaseUrl("/images/events/event-1.webp"),
     featured: true,
     upcoming: true,
     totalSeats: 350,
@@ -23,7 +28,7 @@ export const INITIAL_EVENTS = [
       name: "Dr. Elena Vance",
       role: "Head of Frontier AI Research",
       company: "Cognitive Synthetics Lab",
-      avatar: "/images/speakers/speaker-1.webp",
+      avatar: withBaseUrl("/images/speakers/speaker-1.webp"),
       bio: "Former Stanford AI fellow with 14+ years pioneering deep transformer models and autonomous reasoning agents."
     },
     agenda: [
@@ -44,8 +49,8 @@ export const INITIAL_EVENTS = [
     location: "New York, NY",
     venue: "Manhattan Tech Hub, 450 Lexington Ave",
     format: "In-Person",
-    image: "/images/events/event-2.webp",
-    banner: "/images/events/event-2.webp",
+    image: withBaseUrl("/images/events/event-2.webp"),
+    banner: withBaseUrl("/images/events/event-2.webp"),
     featured: true,
     upcoming: true,
     totalSeats: 120,
@@ -58,7 +63,7 @@ export const INITIAL_EVENTS = [
       name: "David K. Martinez",
       role: "Principal Frontend Architect",
       company: "Veloce Systems",
-      avatar: "/images/speakers/speaker-2.webp",
+      avatar: withBaseUrl("/images/speakers/speaker-2.webp"),
       bio: "Author of 'Mastering Modern UI Architecture' and core contributor to open-source React toolchains."
     },
     agenda: [
@@ -79,8 +84,8 @@ export const INITIAL_EVENTS = [
     location: "Berlin / Online",
     venue: "Designers Hall & Zoom Interactive Classroom",
     format: "Online & Interactive",
-    image: "/images/events/event-3.webp",
-    banner: "/images/events/event-3.webp",
+    image: withBaseUrl("/images/events/event-3.webp"),
+    banner: withBaseUrl("/images/events/event-3.webp"),
     featured: true,
     upcoming: true,
     totalSeats: 200,
@@ -93,7 +98,7 @@ export const INITIAL_EVENTS = [
       name: "Amara Okonjo",
       role: "VP of Product Design",
       company: "Studio Aura",
-      avatar: "/images/speakers/speaker-3.webp",
+      avatar: withBaseUrl("/images/speakers/speaker-3.webp"),
       bio: "Design leader with 12+ years creating design systems for Fortune 500 fintech and healthcare products."
     },
     agenda: [
@@ -114,8 +119,8 @@ export const INITIAL_EVENTS = [
     location: "Austin, TX",
     venue: "Austin Tech Venture Hub, 100 Congress Ave",
     format: "In-Person",
-    image: "/images/events/event-4.webp",
-    banner: "/images/events/event-4.webp",
+    image: withBaseUrl("/images/events/event-4.webp"),
+    banner: withBaseUrl("/images/events/event-4.webp"),
     featured: true,
     upcoming: true,
     totalSeats: 180,
@@ -128,7 +133,7 @@ export const INITIAL_EVENTS = [
       name: "Julian Sterling",
       role: "Managing Partner",
       company: "Horizon Seed Ventures",
-      avatar: "/images/speakers/speaker-4.webp",
+      avatar: withBaseUrl("/images/speakers/speaker-4.webp"),
       bio: "Former 2x SaaS founder, now active investor in 65+ seed-stage B2B enterprise software companies."
     },
     agenda: [
@@ -149,8 +154,8 @@ export const INITIAL_EVENTS = [
     location: "London, UK / Online",
     venue: "King's Cross Digital Learning Center & Online",
     format: "Hybrid",
-    image: "/images/events/event-5.webp",
-    banner: "/images/events/event-5.webp",
+    image: withBaseUrl("/images/events/event-5.webp"),
+    banner: withBaseUrl("/images/events/event-5.webp"),
     featured: true,
     upcoming: true,
     totalSeats: 150,
@@ -163,7 +168,7 @@ export const INITIAL_EVENTS = [
       name: "Dr. Alistair MacIntyre",
       role: "Chief Data Scientist",
       company: "Oxford Predictive Systems",
-      avatar: "/images/speakers/speaker-5.webp",
+      avatar: withBaseUrl("/images/speakers/speaker-5.webp"),
       bio: "Lecturer in Computational Statistics and consultant for major aerospace and bio-pharma firms."
     },
     agenda: [
@@ -184,8 +189,8 @@ export const INITIAL_EVENTS = [
     location: "Seattle, WA / Online",
     venue: "Pacific Technology Campus & Live Broadcast",
     format: "Hybrid",
-    image: "/images/events/event-6.webp",
-    banner: "/images/events/event-6.webp",
+    image: withBaseUrl("/images/events/event-6.webp"),
+    banner: withBaseUrl("/images/events/event-6.webp"),
     featured: true,
     upcoming: true,
     totalSeats: 140,
@@ -198,7 +203,7 @@ export const INITIAL_EVENTS = [
       name: "Marcus Vance",
       role: "VP of Distributed Engineering",
       company: "Synthetix Cloud Labs",
-      avatar: "/images/speakers/speaker-6.webp",
+      avatar: withBaseUrl("/images/speakers/speaker-6.webp"),
       bio: "Former Amazon Web Services architect; author of 'Resilient Systems at Hyper-Scale'."
     },
     agenda: [
@@ -219,8 +224,8 @@ export const INITIAL_EVENTS = [
     location: "Seattle, WA",
     venue: "Pacific Innovation Hub, Suite 800",
     format: "In-Person",
-    image: "/images/events/event-7.webp",
-    banner: "/images/events/event-7.webp",
+    image: withBaseUrl("/images/events/event-7.webp"),
+    banner: withBaseUrl("/images/events/event-7.webp"),
     featured: false,
     upcoming: true,
     totalSeats: 90,
@@ -233,7 +238,7 @@ export const INITIAL_EVENTS = [
       name: "Rachel Kowalski",
       role: "Director of Product",
       company: "CloudScale HQ",
-      avatar: "/images/speakers/speaker-7.webp",
+      avatar: withBaseUrl("/images/speakers/speaker-7.webp"),
       bio: "Scaled product teams from Series A to pre-IPO; mentor at Techstars and 500 Global."
     },
     agenda: [
@@ -254,8 +259,8 @@ export const INITIAL_EVENTS = [
     location: "Chicago, IL",
     venue: "Merchandise Mart Tech Auditorium",
     format: "In-Person",
-    image: "/images/events/event-8.webp",
-    banner: "/images/events/event-8.webp",
+    image: withBaseUrl("/images/events/event-8.webp"),
+    banner: withBaseUrl("/images/events/event-8.webp"),
     featured: false,
     upcoming: true,
     totalSeats: 160,
@@ -268,7 +273,7 @@ export const INITIAL_EVENTS = [
       name: "Tariq Mansoor",
       role: "Staff Infrastructure Architect",
       company: "Apex Cloud Infrastructure",
-      avatar: "/images/speakers/speaker-8.webp",
+      avatar: withBaseUrl("/images/speakers/speaker-8.webp"),
       bio: "CNCF ambassador and cloud architect managing 10,000+ pod clusters across hybrid clouds."
     },
     agenda: [
@@ -289,8 +294,8 @@ export const INITIAL_EVENTS = [
     location: "Boston, MA / Online",
     venue: "Cambridge Innovation Center & Virtual Stage",
     format: "Hybrid",
-    image: "/images/events/event-9.webp",
-    banner: "/images/events/event-9.webp",
+    image: withBaseUrl("/images/events/event-9.webp"),
+    banner: withBaseUrl("/images/events/event-9.webp"),
     featured: false,
     upcoming: true,
     totalSeats: 220,
@@ -303,7 +308,7 @@ export const INITIAL_EVENTS = [
       name: "Prof. Clara Higgins",
       role: "Dean of Digital Pedagogies",
       company: "New England Institute of EdTech",
-      avatar: "/images/speakers/speaker-9.webp",
+      avatar: withBaseUrl("/images/speakers/speaker-9.webp"),
       bio: "Pioneered interactive coding curriculums adopted by over 250 school districts nationwide."
     },
     agenda: [
@@ -324,8 +329,8 @@ export const INITIAL_EVENTS = [
     location: "San Francisco, CA",
     venue: "d.Studio Workshop Space, 220 2nd Street",
     format: "In-Person",
-    image: "/images/events/event-10.webp",
-    banner: "/images/events/event-10.webp",
+    image: withBaseUrl("/images/events/event-10.webp"),
+    banner: withBaseUrl("/images/events/event-10.webp"),
     featured: false,
     upcoming: true,
     totalSeats: 80,
@@ -338,7 +343,7 @@ export const INITIAL_EVENTS = [
       name: "Maya Lin-Torres",
       role: "Lead Innovation Facilitator",
       company: "Empathy Labs Co.",
-      avatar: "/images/speakers/speaker-10.webp",
+      avatar: withBaseUrl("/images/speakers/speaker-10.webp"),
       bio: "Global innovation facilitator trained at Stanford d.school; worked with healthcare and mobility teams."
     },
     agenda: [
@@ -359,8 +364,8 @@ export const INITIAL_EVENTS = [
     location: "Singapore / Online",
     venue: "Marina Bay Sands Expo Center & Live Stream",
     format: "Hybrid",
-    image: "/images/events/event-11.webp",
-    banner: "/images/events/event-11.webp",
+    image: withBaseUrl("/images/events/event-11.webp"),
+    banner: withBaseUrl("/images/events/event-11.webp"),
     featured: false,
     upcoming: true,
     totalSeats: 300,
@@ -373,7 +378,7 @@ export const INITIAL_EVENTS = [
       name: "Kenji Takahashi",
       role: "Head of Digital Asset Infrastructure",
       company: "Pacific Rim Financial Consortium",
-      avatar: "/images/speakers/speaker-11.webp",
+      avatar: withBaseUrl("/images/speakers/speaker-11.webp"),
       bio: "Advising central banks and tier-1 institutions on tokenization infrastructure and cryptographic protocols."
     },
     agenda: [
@@ -394,8 +399,8 @@ export const INITIAL_EVENTS = [
     location: "Washington, DC",
     venue: "Cyber Defense Academy, 1200 K Street NW",
     format: "In-Person",
-    image: "/images/events/event-12.webp",
-    banner: "/images/events/event-12.webp",
+    image: withBaseUrl("/images/events/event-12.webp"),
+    banner: withBaseUrl("/images/events/event-12.webp"),
     featured: false,
     upcoming: true,
     totalSeats: 110,
@@ -408,7 +413,7 @@ export const INITIAL_EVENTS = [
       name: "Samantha 'Vex' Briggs",
       role: "Lead Penetration Tester & Red Teamer",
       company: "Aegis Cyber Defense",
-      avatar: "/images/speakers/speaker-12.webp",
+      avatar: withBaseUrl("/images/speakers/speaker-12.webp"),
       bio: "Certified ethical hacker (OSCP, CISSP) with 10+ years conducting defense audits for Fortune 100 enterprise infrastructure."
     },
     agenda: [
@@ -429,8 +434,8 @@ export const INITIAL_EVENTS = [
     location: "Los Angeles, CA / Online",
     venue: "Culver City Media Arts Studio & Stream",
     format: "Hybrid",
-    image: "/images/events/event-13.webp",
-    banner: "/images/events/event-13.webp",
+    image: withBaseUrl("/images/events/event-13.webp"),
+    banner: withBaseUrl("/images/events/event-13.webp"),
     featured: false,
     upcoming: true,
     totalSeats: 175,
@@ -443,7 +448,7 @@ export const INITIAL_EVENTS = [
       name: "Mateo Rossi",
       role: "Creative Technologist & Filmmaker",
       company: "Prism Digital Studio",
-      avatar: "/images/speakers/speaker-13.webp",
+      avatar: withBaseUrl("/images/speakers/speaker-13.webp"),
       bio: "Award-winning creative director blending cinematic live-action with neural rendering pipelines."
     },
     agenda: [
@@ -464,8 +469,8 @@ export const INITIAL_EVENTS = [
     location: "Toronto, ON / Online",
     venue: "Toronto Tech Campus & Global Stream",
     format: "Hybrid",
-    image: "/images/events/event-14.webp",
-    banner: "/images/events/event-14.webp",
+    image: withBaseUrl("/images/events/event-14.webp"),
+    banner: withBaseUrl("/images/events/event-14.webp"),
     featured: false,
     upcoming: true,
     totalSeats: 160,
@@ -478,7 +483,7 @@ export const INITIAL_EVENTS = [
       name: "Natasha Roy",
       role: "Principal Web Architect",
       company: "Apex Web Performance",
-      avatar: "/images/speakers/speaker-14.webp",
+      avatar: withBaseUrl("/images/speakers/speaker-14.webp"),
       bio: "Google Developer Expert in Web Technologies with a decade leading front-end performance audits for top eCommerce platforms."
     },
     agenda: [

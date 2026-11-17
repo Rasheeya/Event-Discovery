@@ -1,6 +1,8 @@
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 export default function NotFoundPage() {
   const navigate = useNavigate();
 
@@ -20,7 +22,7 @@ export default function NotFoundPage() {
         <div style={{ marginBottom: '1.75rem', display: 'flex', justifyContent: 'center' }}>
           <Link to="/" className="brand-logo" style={{ textDecoration: 'none' }} aria-label="Stackly Home">
             <img
-              src="/images/logo/stackly-logo.webp"
+              src={`${BASE_URL}images/logo/stackly-logo.webp`}
               alt="Stackly"
               className="navbar-brand-img"
               style={{ height: '42px', width: 'auto' }}

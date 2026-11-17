@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useNavigate } from 'react-router-dom';
 import { useEvents } from '../context/EventContext';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,7 +33,7 @@ export default function Navbar() {
         {/* Brand Logo */}
         <Link to="/" className="brand-logo" onClick={closeMobileMenu} aria-label="Stackly Home">
           <img
-            src="/images/logo/stackly-logo.webp"
+            src={`${BASE_URL}images/logo/stackly-logo.webp`}
             alt="Stackly"
             className="navbar-brand-img"
           />

@@ -7,6 +7,8 @@ import EventCard from '../components/EventCard';
 import NewsletterForm from '../components/NewsletterForm';
 import AnimatedCounter from '../components/AnimatedCounter';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 export default function HomePage() {
   const navigate = useNavigate();
   const { events, openRegisterModal } = useEvents();
@@ -277,7 +279,7 @@ export default function HomePage() {
                 "The React 19 Architecture masterclass was the most practical workshop I've attended in years. We deployed real Server Actions and learned production patterns not found in docs."
               </p>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
-                <img src="/images/speakers/speaker-1.webp" alt="Reviewer" style={{ width: '45px', height: '45px', borderRadius: '50%', objectFit: 'cover' }} />
+                <img src={`${BASE_URL}images/speakers/speaker-1.webp`} alt="Reviewer" style={{ width: '45px', height: '45px', borderRadius: '50%', objectFit: 'cover' }} />
                 <div>
                   <div style={{ fontWeight: 700, fontSize: '0.925rem' }}>Claire Zheng</div>
                   <div style={{ fontSize: '0.775rem', color: 'var(--text-muted)' }}>Staff Engineer at Stripe</div>
@@ -297,7 +299,7 @@ export default function HomePage() {
                 "The Figma Design Systems lab bridged the gap between our design tokens and GitHub pipelines. The zero-friction registration and instant digital pass made check-in a breeze."
               </p>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
-                <img src="/images/speakers/speaker-3.webp" alt="Reviewer" style={{ width: '45px', height: '45px', borderRadius: '50%', objectFit: 'cover' }} />
+                <img src={`${BASE_URL}images/speakers/speaker-3.webp`} alt="Reviewer" style={{ width: '45px', height: '45px', borderRadius: '50%', objectFit: 'cover' }} />
                 <div>
                   <div style={{ fontWeight: 700, fontSize: '0.925rem' }}>Jordan Thorne</div>
                   <div style={{ fontSize: '0.775rem', color: 'var(--text-muted)' }}>Lead Product Designer at Spotify</div>
@@ -317,7 +319,7 @@ export default function HomePage() {
                 "As an angel investor and founder, the Startup Syndicate brought together serious builders. Stackly's seat counters and reminder systems kept everyone perfectly synchronized."
               </p>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
-                <img src="/images/speakers/speaker-4.webp" alt="Reviewer" style={{ width: '45px', height: '45px', borderRadius: '50%', objectFit: 'cover' }} />
+                <img src={`${BASE_URL}images/speakers/speaker-4.webp`} alt="Reviewer" style={{ width: '45px', height: '45px', borderRadius: '50%', objectFit: 'cover' }} />
                 <div>
                   <div style={{ fontWeight: 700, fontSize: '0.925rem' }}>Tariq El-Masri</div>
                   <div style={{ fontSize: '0.775rem', color: 'var(--text-muted)' }}>General Partner at Vertex Seed</div>

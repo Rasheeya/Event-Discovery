@@ -8,6 +8,8 @@ import ToastNotification from './components/ToastNotification';
 import ScrollToTop from './components/ScrollToTop';
 import AOSInit from './components/AOSInit';
 
+const routerBasename = import.meta.env.BASE_URL === '/' ? undefined : import.meta.env.BASE_URL.replace(/\/$/, '');
+
 // Pages
 import HomePage from './pages/HomePage';
 import ExploreEventsPage from './pages/ExploreEventsPage';
@@ -31,7 +33,7 @@ function MainLayout() {
 export default function App() {
   return (
     <EventProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={routerBasename}>
         <ScrollToTop />
         <AOSInit />
         <Routes>

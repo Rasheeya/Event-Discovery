@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import NewsletterForm from './NewsletterForm';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 export default function Footer() {
   return (
     <footer className="site-footer">
@@ -11,7 +13,7 @@ export default function Footer() {
           <div>
             <Link to="/" style={{ display: 'inline-block', marginBottom: '1.15rem', textDecoration: 'none' }} aria-label="Stackly Home">
               <img
-                src="/images/logo/stackly-logo.webp"
+                src={`${BASE_URL}images/logo/stackly-logo.webp`}
                 alt="Stackly"
                 className="footer-brand-img"
               />
