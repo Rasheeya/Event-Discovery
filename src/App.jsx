@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import { EventProvider } from './context/EventContext';
@@ -17,10 +18,14 @@ import EventDetailsPage from './pages/EventDetailsPage';
 import MyRegistrationsPage from './pages/MyRegistrationsPage';
 import NotFoundPage from './pages/NotFoundPage';
 
-// Standard site layout with Header and Footer
+// Standard site layout
 function MainLayout() {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      minHeight: '100vh'
+    }}>
       <Navbar />
       <main style={{ flex: 1 }}>
         <Outlet />
@@ -33,11 +38,11 @@ function MainLayout() {
 export default function App() {
   return (
     <EventProvider>
-      <BrowserRouter basename={routerBasename}>
+      <BrowserRouter>
         <ScrollToTop />
         <AOSInit />
+
         <Routes>
-          {/* Standard Pages wrapped with Navbar & Footer */}
           <Route element={<MainLayout />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/events" element={<ExploreEventsPage />} />
@@ -45,10 +50,10 @@ export default function App() {
             <Route path="/registrations" element={<MyRegistrationsPage />} />
           </Route>
 
-          {/* 404 Page (Standalone without Navbar & Footer as requested) */}
           <Route path="/404" element={<NotFoundPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
+
         <RegistrationModal />
         <ToastNotification />
       </BrowserRouter>
